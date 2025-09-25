@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'checkstyle'
 }
 
 group = 'org.example'
@@ -26,3 +27,8 @@ application {
 run {
     standardInput = System.in
 }
+
+checkstyle {
+    toolVersion = '10.23.0'
+}
+
