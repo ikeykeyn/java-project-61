@@ -29,6 +29,6 @@ run {
 }
 
 checkstyle {
-    toolVersion = '10.23.0'
+    toolVersion = '9.0.1'
 }
 
