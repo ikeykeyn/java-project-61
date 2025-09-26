@@ -28,7 +28,4 @@ run {
     standardInput = System.in
 }
 
-checkstyle {
-    toolVersion = '9.0.1'
-}
 
