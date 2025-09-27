@@ -2,16 +2,19 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.util.Random;
+
 public class CalcGame {
 
     public static void startGame() {
+        Random random = new Random();
         String question = "What is the result of the expression?";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int firstNumber = (int) (Math.random() * 100);
-            int secondNumber = (int) (Math.random() * 100);
+            int firstNumber = random.nextInt(100);;
+            int secondNumber = random.nextInt(100);;
             String[] signes = {"+", "-", "*"};
-            String sign = signes[(int) (Math.random() * signes.length)];
+            String sign = signes[random.nextInt(3)];
             roundAnswer[0] = firstNumber + " " + sign + " " + secondNumber;
             roundAnswer[1] = Integer.toString(calculateResult(firstNumber, secondNumber, sign));
 
