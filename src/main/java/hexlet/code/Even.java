@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
+
     public static void isEven(String name) {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < 3; i ++) {

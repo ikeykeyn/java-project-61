@@ -38,4 +38,6 @@ make lint
 ```bash
 make update
 ```
+
+https://asciinema.org/a/2rhPr3XzHHEebDi3ejs1ftTSx
  

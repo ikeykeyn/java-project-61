@@ -6,10 +6,6 @@ build:
 	./gradlew clean build
 install:
 	./gradlew clean install
-
-run-dist:
-	./build/install/java-package/bin/java-package
-
 run:
 	./gradlew run
 run-clean:
