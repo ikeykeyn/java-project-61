@@ -17,14 +17,10 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int gameType = scanner.nextInt();
         switch (gameType) {
-            case 1:
-                Cli.greeting();
-            case 2:
-                EvenGame.startGame();
-            case 3:
-                CalcGame.startGame();
-            case 4:
-                GcdGame.startGame();
+            case 1 -> Cli.greeting();
+            case 2 -> EvenGame.startGame();
+            case 3 -> CalcGame.startGame();
+            case 4 -> GcdGame.startGame();
         }
     }
 }

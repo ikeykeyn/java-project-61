@@ -16,7 +16,7 @@ public class Engine {
             String inputAnswer = scanner.nextLine();
             if (!inputAnswer.equals(roundAnswer[1])) {
                 System.out.println("'" + inputAnswer + "' is wrong answer ;(. Correct answer was '" + roundAnswer[1] + "'.");
-                System.out.println("Let's try again." + name + "!");
+                System.out.println("Let's try again," + name + "!");
                 System.exit(0);
             }
             System.out.println("Correct!");
