@@ -12,7 +12,8 @@ run-dist:
 
 run:
 	./gradlew run
-
+run-clean:
+	./gradlew run --console=plain
 test:
 	./gradlew test
 
