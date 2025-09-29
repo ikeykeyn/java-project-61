@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class CalcGame {
+public final class CalcGame {
     public static final int NUMBER_OF_SIGNS = 3;
     public static final int MIN_RANDOM_VALUE = 1;
     public static final int MAX_RANDOM_VALUE = 100;

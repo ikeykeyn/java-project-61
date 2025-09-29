@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class GcdGame {
+public final class GcdGame {
     public static final int MIN_RANDOM_VALUE = 1;
     public static final int MAX_RANDOM_VALUE = 100;
 

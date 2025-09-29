@@ -3,11 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 
-public class ProgressionGame {
+public final class ProgressionGame {
     public static final int PROGRESSION_LENGTH = 10;
-    public static final int MAX_STEP = 20;
+    public static final int MAX_STEP = 10;
     public static final int MIN_RANDOM_VALUE = 1;
-    public static final int MAX_RANDOM_VALUE = 100;
+    public static final int MAX_RANDOM_VALUE = 50;
 
 
     public static void startGame() {
@@ -16,7 +16,7 @@ public class ProgressionGame {
         for (String[] roundAnswer : roundAnswers) {
             int firstNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             int step = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_STEP);
-            int hiddenNumberIndex = Engine.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH);
+            int hiddenNumberIndex = Engine.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH - 1);
             roundAnswer[0] = progressionLine(firstNumber, step, hiddenNumberIndex);
             roundAnswer[1] = Integer.toString(firstNumber + step * hiddenNumberIndex);
         }
