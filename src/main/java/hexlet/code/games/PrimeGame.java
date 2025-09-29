@@ -19,15 +19,14 @@ public class PrimeGame {
     }
 
     public static boolean isPrime(int number) {
-        if (number < 2) {
+        if (number == 0 || number == 1) {
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(number); i++) {
+        for (var i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }
         }
         return true;
-
     }
 }
