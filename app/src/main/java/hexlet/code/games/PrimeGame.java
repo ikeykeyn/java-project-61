@@ -29,4 +29,8 @@ public class PrimeGame {
         }
         return true;
     }
+
+    private PrimeGame() {
+        throw new IllegalStateException("Utility class");
+    }
 }

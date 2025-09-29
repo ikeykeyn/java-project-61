@@ -29,4 +29,8 @@ public class CalcGame {
             default -> 0;
         };
     }
+
+    private CalcGame() {
+        throw new IllegalStateException("Utility class");
+    }
 }

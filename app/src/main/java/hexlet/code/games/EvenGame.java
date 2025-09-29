@@ -20,4 +20,8 @@ public class EvenGame {
     private static boolean isEven(int number) {
         return number % 2 == 0;
     }
+
+    private EvenGame() {
+        throw new IllegalStateException("Utility class");
+    }
 }

@@ -25,5 +25,9 @@ public class GcdGame {
         return findGCD(b, a % b);
     }
 
+    private GcdGame() {
+        throw new IllegalStateException("Utility class");
+    }
+
 
 }

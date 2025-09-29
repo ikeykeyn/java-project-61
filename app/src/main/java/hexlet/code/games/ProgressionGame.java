@@ -15,8 +15,8 @@ public class ProgressionGame {
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
             int firstNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
-            int step = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
-            int hiddenNumberIndex = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
+            int step = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_STEP);
+            int hiddenNumberIndex = Engine.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH);
             roundAnswer[0] = progressionLine(firstNumber, step, hiddenNumberIndex);
             roundAnswer[1] = Integer.toString(firstNumber + step * hiddenNumberIndex);
         }
@@ -33,5 +33,9 @@ public class ProgressionGame {
             }
         }
         return sb.toString();
+    }
+
+    private ProgressionGame() {
+        throw new IllegalStateException("Utility class");
     }
 }
