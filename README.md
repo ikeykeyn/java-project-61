@@ -3,6 +3,7 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ikeykeyn_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ikeykeyn_java-project-61)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ikeykeyn_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=ikeykeyn_java-project-61)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ikeykeyn_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ikeykeyn_java-project-61)
+[![hexlet-check](https://github.com/ikeykeyn/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ikeykeyn/java-project-61/actions/workflows/hexlet-check.yml)
 ## Start
 
 ```bash
