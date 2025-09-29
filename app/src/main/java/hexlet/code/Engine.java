@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int NUMBERS_OF_ROUNDS = 3;
-    public static final int RANDOM_SEED = 100;
 
     public static void gameProcess(String question, String[][] roundAnswers) {
         String name = Cli.greeting();
@@ -28,6 +27,10 @@ public class Engine {
         }
         System.out.println("Congratulations, " + name + "!");
 
+    }
+
+    public static int randomNumber(int min, int max) {
+        return min  + (int) (Math.random() * ((max - min) + 1));
     }
 
 

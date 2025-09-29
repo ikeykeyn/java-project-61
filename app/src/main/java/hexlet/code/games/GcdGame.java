@@ -2,16 +2,16 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class GcdGame {
+    public static final int MIN_RANDOM_VALUE = 1;
+    public static final int MAX_RANDOM_VALUE = 100;
+
     public static void startGame() {
-        Random random = new Random();
         String question = "Find the greatest common divisor of given numbers.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int firstNumber = random.nextInt(Engine.RANDOM_SEED);
-            int secondNumber = random.nextInt(Engine.RANDOM_SEED);
+            int firstNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
+            int secondNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             roundAnswer[0] = firstNumber + " " + secondNumber;
             roundAnswer[1] = Integer.toString(findGCD(firstNumber, secondNumber));
         }

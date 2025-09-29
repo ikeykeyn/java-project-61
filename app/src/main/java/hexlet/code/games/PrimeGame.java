@@ -2,15 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class PrimeGame {
+    public static final int MIN_RANDOM_VALUE = 1;
+    public static final int MAX_RANDOM_VALUE = 100;
+
     public static void startGame() {
-        Random random = new Random();
         String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int number = random.nextInt(1, Engine.RANDOM_SEED);
+            int number = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             roundAnswer[0] = Integer.toString(number);
             roundAnswer[1] = isPrime(number) ? "yes" : "no";
         }

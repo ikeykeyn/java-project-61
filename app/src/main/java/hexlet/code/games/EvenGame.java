@@ -2,15 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class EvenGame {
+    public static final int MIN_RANDOM_VALUE = 1;
+    public static final int MAX_RANDOM_VALUE = 100;
+
     public static void startGame() {
-        Random random = new Random();
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int randomNumber = random.nextInt(Engine.RANDOM_SEED);
+            int randomNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             roundAnswer[0] = Integer.toString(randomNumber);
             roundAnswer[1] = isEven(randomNumber) ? "yes" : "no";
         }
