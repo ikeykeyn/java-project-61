@@ -39,5 +39,5 @@ make lint
 make update
 ```
 
-https://asciinema.org/a/2rhPr3XzHHEebDi3ejs1ftTSx
+https://asciinema.org/a/nu8FN5AAh3XhHe88cgVt7VhVY
  
