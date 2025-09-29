@@ -10,7 +10,7 @@ public class EvenGame {
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int randomNumber = random.nextInt(100);
+            int randomNumber = random.nextInt(Engine.RANDOM_SEED);
             roundAnswer[0] = Integer.toString(randomNumber);
             roundAnswer[1] = isEven(randomNumber) ? "yes" : "no";
         }

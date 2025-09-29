@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GcdGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeGame;
 
 import java.util.Scanner;
 
@@ -16,14 +20,14 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
-        int gameType = scanner.nextInt();
+        String gameType = scanner.nextLine();
         switch (gameType) {
-            case 1 -> Cli.greeting();
-            case 2 -> EvenGame.startGame();
-            case 3 -> CalcGame.startGame();
-            case 4 -> GcdGame.startGame();
-            case 5 -> ProgressionGame.startGame();
-            case 6 -> PrimeGame.startGame();
+            case "1" -> Cli.greeting();
+            case "2" -> EvenGame.startGame();
+            case "3" -> CalcGame.startGame();
+            case "4" -> GcdGame.startGame();
+            case "5" -> ProgressionGame.startGame();
+            case "6" -> PrimeGame.startGame();
             default -> {
                 System.exit(0);
             }

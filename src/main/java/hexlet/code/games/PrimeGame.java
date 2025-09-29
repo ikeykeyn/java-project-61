@@ -10,7 +10,7 @@ public class PrimeGame {
         String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int number = random.nextInt(1, 100);
+            int number = random.nextInt(1, Engine.RANDOM_SEED);
             roundAnswer[0] = Integer.toString(number);
             roundAnswer[1] = isPrime(number) ? "yes" : "no";
         }

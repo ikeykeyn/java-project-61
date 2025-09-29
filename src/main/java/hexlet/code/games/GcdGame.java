@@ -10,8 +10,8 @@ public class GcdGame {
         String question = "Find the greatest common divisor of given numbers.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int firstNumber = random.nextInt(100);
-            int secondNumber = random.nextInt(100);
+            int firstNumber = random.nextInt(Engine.RANDOM_SEED);
+            int secondNumber = random.nextInt(Engine.RANDOM_SEED);
             roundAnswer[0] = firstNumber + " " + secondNumber;
             roundAnswer[1] = Integer.toString(findGCD(firstNumber, secondNumber));
         }
