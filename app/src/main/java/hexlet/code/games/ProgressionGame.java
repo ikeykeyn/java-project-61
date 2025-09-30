@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 
 public final class ProgressionGame {
@@ -14,25 +15,23 @@ public final class ProgressionGame {
         String question = "What number is missing in the progression?";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int firstNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
-            int step = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_STEP);
-            int hiddenNumberIndex = Engine.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH - 1);
-            roundAnswer[0] = progressionLine(firstNumber, step, hiddenNumberIndex);
+            int firstNumber = Utils.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
+            int step = Utils.randomNumber(MIN_RANDOM_VALUE, MAX_STEP);
+            String[] line = progressionLine(firstNumber, step);
+            int hiddenNumberIndex = Utils.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH - 1);
+            line[hiddenNumberIndex] = "..";
+            roundAnswer[0] = String.join(" ", line);
             roundAnswer[1] = Integer.toString(firstNumber + step * hiddenNumberIndex);
         }
         Engine.gameProcess(question, roundAnswers);
     }
 
-    public static String progressionLine(int firstNumber, int step, int hiddenNumberIndex) {
-        StringBuilder sb = new StringBuilder();
+    public static String[] progressionLine(int firstNumber, int step) {
+        String[] line = new String[PROGRESSION_LENGTH];
         for (int i = 0; i < PROGRESSION_LENGTH; i++) {
-            if (i != hiddenNumberIndex) {
-                sb.append(firstNumber + step * i).append(" ");
-            }  else {
-                sb.append("..").append(" ");
-            }
+            line[i] = Integer.toString(firstNumber + step * i);
         }
-        return sb.toString();
+        return line;
     }
 
     private ProgressionGame() {

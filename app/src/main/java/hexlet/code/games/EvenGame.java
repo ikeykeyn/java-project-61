@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public final class EvenGame {
     public static final int MIN_RANDOM_VALUE = 1;
@@ -10,7 +11,7 @@ public final class EvenGame {
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] roundAnswers = new String[Engine.NUMBERS_OF_ROUNDS][2];
         for (String[] roundAnswer : roundAnswers) {
-            int randomNumber = Engine.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
+            int randomNumber = Utils.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             roundAnswer[0] = Integer.toString(randomNumber);
             roundAnswer[1] = isEven(randomNumber) ? "yes" : "no";
         }
