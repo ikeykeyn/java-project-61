@@ -17,7 +17,7 @@ public final class ProgressionGame {
         for (String[] roundAnswer : roundAnswers) {
             int firstNumber = Utils.randomNumber(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
             int step = Utils.randomNumber(MIN_RANDOM_VALUE, MAX_STEP);
-            String[] line = progressionLine(firstNumber, step);
+            String[] line = progressionLine(firstNumber, step, PROGRESSION_LENGTH);
             int hiddenNumberIndex = Utils.randomNumber(MIN_RANDOM_VALUE, PROGRESSION_LENGTH - 1);
             line[hiddenNumberIndex] = "..";
             roundAnswer[0] = String.join(" ", line);
@@ -26,9 +26,9 @@ public final class ProgressionGame {
         Engine.gameProcess(question, roundAnswers);
     }
 
-    public static String[] progressionLine(int firstNumber, int step) {
-        String[] line = new String[PROGRESSION_LENGTH];
-        for (int i = 0; i < PROGRESSION_LENGTH; i++) {
+    public static String[] progressionLine(int firstNumber, int step, int length) {
+        String[] line = new String[length];
+        for (int i = 0; i < length; i++) {
             line[i] = Integer.toString(firstNumber + step * i);
         }
         return line;
